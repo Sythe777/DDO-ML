@@ -2,7 +2,7 @@
 #AutoIt3Wrapper_Icon=icon.ico
 #AutoIt3Wrapper_Outfile=..\DDO-ML.exe
 #AutoIt3Wrapper_Res_Description=An alternate DDO launcher
-#AutoIt3Wrapper_Res_Fileversion=1.5.3.0
+#AutoIt3Wrapper_Res_Fileversion=1.5.3.1
 #AutoIt3Wrapper_Res_Field=ProductName|DDO-ML
 #AutoIt3Wrapper_Run_Au3Stripper=y
 #Au3Stripper_Parameters=/rsln /mo
@@ -265,7 +265,7 @@ Func launch()
 		If $character[$acc - 1] == -1 Then $character[$acc - 1] = ""
 		$preferencesFile[$acc - 1] = _xmlGetattrib("shortcut[" & $i & "]/account[" & $acc & "]/preferencesFile", "value")
 		If $preferencesFile[$acc - 1] == -1 Then $preferencesFile[$acc - 1] = ""
-		$tempstring = 'ddolauncher.exe' & ' -s ' & $server & ' -g "' & $ddo_folder & '" -u "' & $user & '" -a "' & $pass & '" -z "' & $subscription & '"'
+		$tempstring = 'ddolauncher.exe' & ' -s "' & $server & '" -g "' & $ddo_folder & '" -u "' & $user & '" -a "' & $pass & '" -z "' & $subscription & '"'
 		If $preferencesFile[$acc - 1] <> "" Then
 			$tempstring &= ' -i "' & $preferencesFile[$acc - 1] & '"'
 		EndIf

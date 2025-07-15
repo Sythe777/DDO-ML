@@ -10,6 +10,24 @@ DDO-ML is a fast, lightweight game launcher I built using ~~**_Python_ (networki
 This is a small GUI interace similar to PyLotro. It is derived from an excellent command line Python Launcher by Kahath, which you can find <a href="https://www.ddo.com/forums/showthread.php/382010-How-to-launch-DDO-from-command-line">here</a>.
 
 # Changelog:
+## [1.5.3.1] - 2025-07-15
+### Fixed
+- support new server names introduced with Update 74.1\
+you have to change server names in ddo-ml.xml for old servers to:
+  - `Argonnessen [Old]`
+  - `Cannith [Old]`
+  - `Ghallanda [Old]`
+  - `Khyber [Old]`
+  - `Orien [Old]`
+  - `Sarlona [Old]`
+  - `Thelanis [Old]`
+  - `Wayfinder [Old]`
+  - `Cormyr [US]`\
+and use new 64 bit server names as: 
+  - `Moonsea [EU]`
+  - `Shadowdale [US]`
+  - `Thrane [US]`
+ 
 ## [1.5.3.0] - 2020-12-01
 ### Fixed
 - error caused by changes in configuration xml as of Update 51.2 
