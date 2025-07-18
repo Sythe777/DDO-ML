@@ -72,7 +72,7 @@ Func set_server()
   if UBound($input) < 2 then
     Dim $serverlist[12] = ["Argonnessen [Old]","Cannith [Old]","Ghallanda [Old]","Khyber [Old]","Orien [Old]","Sarlona [Old]","Thelanis [Old]","Wayfinder [Old]","Cormyr [US]","Shadowdale [US]","Thrane [US]","Moonsea [EU]"]
     for $s in $serverlist
-      if StringLeft(StringLower($s), UBound($input[0])) = StringLeft(StringLower($input), UBound($input[0])) then
+      if StringLeft(StringLower($s), StringLen($input[0])) == StringLeft(StringLower($input[0]), StringLen($input[0])) then
         $default_server = $s
         ExitLoop
       EndIf
