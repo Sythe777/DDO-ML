@@ -10,6 +10,11 @@ DDO-ML is a fast, lightweight game launcher I built using ~~**_Python_ (networki
 This is a small GUI interace similar to PyLotro. It is derived from an excellent command line Python Launcher by Kahath, which you can find <a href="https://www.ddo.com/forums/showthread.php/382010-How-to-launch-DDO-from-command-line">here</a>.
 
 # Changelog:
+## [1.5.3.2] - 2025-07-17
+### Fixed
+- allowed for easier server input by removing [old]/[us]/[eu] suffix requirements
+- now supports partial name for server selection
+
 ## [1.5.3.1] - 2025-07-15
 ### Fixed
 - support new server names introduced with Update 74.1\
