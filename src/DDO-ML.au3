@@ -42,7 +42,7 @@ $lamannia_patch_gui = 0
 $login_timeout = 1200000
 
 $default_folder = IniRead($ini_file, "startup", "directory", "C:\\Program Files (x86)\\Turbine\\DDO Unlimited")
-$default_server = IniRead($ini_file, "startup", "server", "thrane [us]")
+$default_server = IniRead($ini_file, "startup", "server", "Thrane [US]")
 $lamannia_folder = IniRead($ini_file, "startup", "lamannia_directory", "")
 $preload = IniRead($ini_file, "startup", "usepreloader", "0")
 $debug = IniRead($ini_file, "startup", "debug", "0")
@@ -67,7 +67,7 @@ EndFunc   ;==>set_directory
 $set_server_item = TrayCreateItem("Set Server")
 TrayItemSetOnEvent(-1, "set_server")
 Func set_server()
-	$default_server = InputBox("Question", "Choose Server:", "thrane [us]", "")
+	$default_server = InputBox("Question", "Choose Server:", IniRead($ini_file, "Startup", "server", "Thrane [US]"), "")
   Dim $input = StringSplit($default_server, " ", $STR_NOCOUNT)
   if UBound($input) < 2 then
     Dim $serverlist[12] = ["Argonnessen [Old]","Cannith [Old]","Ghallanda [Old]","Khyber [Old]","Orien [Old]","Sarlona [Old]","Thelanis [Old]","Wayfinder [Old]","Cormyr [US]","Shadowdale [US]","Thrane [US]","Moonsea [EU]"]
